@@ -1,5 +1,5 @@
 import pytest
-import sympy as sym
+from sympy import *
 from ..computepac import newton_raphson
 
 
