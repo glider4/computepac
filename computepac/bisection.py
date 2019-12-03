@@ -7,7 +7,7 @@
 #       import sympy as sym
 #       f = sym.Function('f')
 #       x = sym.Symbol('x')
-#       f = YOUR EQUATION
+#       f = '''YOUR EQUATION'''
 #       bisection(f, lower bound, upper bound, accuracy desired)
 #
 # Output format: [num_itr, root, total_time]
