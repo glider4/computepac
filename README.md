@@ -1,12 +1,12 @@
 # computepac
- A Python package of mathematical functions, iterative solvers, numerical analysis, and more.
- 
- ## bisection
- The Bisection method is an iterative numerical analysis scheme to find the roots of an equation.
- 
- To find the root of your equation between a certain lower and upper bound, run:
- 
- ```python
+A Python package of mathematical functions, iterative solvers, numerical analysis, and more.
+
+## bisection
+The Bisection method is an iterative numerical analysis scheme to find the roots of an equation.
+
+To find the root of your equation between a certain lower and upper bound, run:
+
+```python
 import sympy as sym
 
 f = sym.Function('f')
@@ -22,6 +22,29 @@ and the total time the program needed for computation.
 ```python
 [num_itr, root, total_time]
 ```
+
+
+## newton_raphson
+The Newton-Raphson Method (or just Newton's Method) is an iterative scheme using derivatives to find
+the root of a function.  To find the root of your equation, make a guess as to where it is, and run:
+
+```python
+import sympy as sym
+
+f = sym.Function('f')
+x = sym.Symbol('x')
+f = '''YOUR EQUATION'''
+
+newton_raphson(f, guess of root, accuracy desired)
+```
+
+The output format includes number of iterations to achieve desired accuracy, the root as calculated,
+and the total time the program needed for computation.
+
+```python
+[num_itr, root, total_time]
+```
+
 
  ## How to run tests
 This package uses `pytest` for unit testing.
