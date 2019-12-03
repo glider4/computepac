@@ -1,5 +1,5 @@
 import pytest
-from sympy import *
+import sympy as sym
 from ..computepac import runge_kutta_four
 
 
