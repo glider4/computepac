@@ -10,12 +10,12 @@
 # Output format: [num_itr, root, total_time]
 #
 
-from sympy import *
+import sympy as sym
 import time
 
 
 def bisection(f, a, b, acc):
-    x = Symbol('x')
+    x = sym.Symbol('x')
     start_time = time.time()                    # start timer
     error = 10                                  # before assignment in while loop
     err = []                                    # to store errors
