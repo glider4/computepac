@@ -46,6 +46,30 @@ and the total time the program needed for computation.
 ```
 
 
+## runge_kutta_four
+Runge Kutta is an iterative scheme that approximates numerical solutions to ordinary differential equations.  To 
+approximate an ODE between two boundaries, if you know the initial conditions (`x0` and `y0`), run:
+
+```python
+import sympy as sym
+
+f = sym.Function('f')
+x1 = sym.Symbol('x1')
+x2 = sym.Symbol('x2')
+f = '''YOUR EQUATION with x1, x2 as x, y'''
+
+rkfour(f, x0, y0, lower bound, upper bound, num steps)
+```
+
+It is important here that you use `f(x1,x2)` over `f(x,y)` in the SymPy function so that the program runs properly.
+The output format includes a (n-large) list of numerical approximations between the bounds given, and the computational
+time.
+
+```python
+[y_values, total_time]
+```
+
+
  ## How to run tests
 This package uses `pytest` for unit testing.
 
