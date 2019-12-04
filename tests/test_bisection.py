@@ -1,6 +1,6 @@
 import pytest
 import sympy as sym
-from ..computepac import bisection
+from computepac import bisection
 
 
 class Test:

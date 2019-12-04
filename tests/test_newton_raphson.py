@@ -1,6 +1,6 @@
 import pytest
 import sympy as sym
-from ..computepac import newton_raphson
+from computepac import newton_raphson
 
 
 class Test:
