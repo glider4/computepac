@@ -18,7 +18,7 @@ bisection(f, lower bound, upper bound, accuracy desired)
 
 Note that the bisection method presented here cannot calculate a root  of 0.  It specifically looks for
 back-to-back iterations that result in < 0 and then > 0 or vice-versa.  So a function like `x**2` cannot be
-estimated because it does not pass over 0 as the function goes from -1 to 1.
+estimated because it does not pass over the x-axis as the function goes from -1 to 1.
 
 The Newton-Raphson method, however, can do this (see below).
 
