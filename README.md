@@ -74,11 +74,20 @@ time.
 This package uses `pytest` for unit testing.
 
 To run tests locally in a terminal, run the following three lines:
+
 ```bash
 cd your_path/computepac
 chmod +x test.sh
 ./test.sh
 ```
-All unit tests are located in the tests directory.  One sample test was built for debugging purposes
+
+Or, you can load the `computepac` package in PyCharm and simply type into the local terminal:
+
+```bash
+pytest
+```
+
+All unit tests are located in the `tests` directory.  One sample test was built for debugging purposes
 (`test_sample.py`).  This unit test will always pass.  If it does not run, then something is wrong with
-pytest or your local setup (make sure you are in the right directory).
+pytest or your local setup (make sure you are in the right directory).  The `tests` directory is set up 
+to import all functions from `computepac` using an `__init__` file.
