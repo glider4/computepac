@@ -66,7 +66,7 @@ The output format includes a (n-large) list of numerical approximations between 
 time.
 
 ```python
-[y_values, total_time]
+[[y_values], total_time]
 ```
 
 
