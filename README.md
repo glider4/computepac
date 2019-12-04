@@ -29,6 +29,8 @@ and the total time the program needed for computation.
 [num_itr, root, total_time]
 ```
 
+Note that `sympy.plot(f)` can be used to plot any of your inputted functions to verify or explore roots.
+
 
 ## newton_raphson
 The Newton-Raphson Method (or just Newton's Method) is an iterative scheme using derivatives to find
