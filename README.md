@@ -20,6 +20,8 @@ Note that the bisection method presented here cannot calculate a root  of 0.  It
 back-to-back iterations that result in < 0 and then > 0 or vice-versa.  So a function like `x**2` cannot be
 estimated because it does not pass over 0 as the function goes from -1 to 1.
 
+The Newton-Raphson method, however, can do this (see below).
+
 The output format includes number of iterations to achieve desired accuracy, the root as calculated,
 and the total time the program needed for computation.
 
