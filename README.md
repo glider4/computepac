@@ -99,3 +99,13 @@ All unit tests are located in the `tests` directory.  One sample test was built 
 (`test_sample.py`).  This unit test will always pass.  If it does not run, then something is wrong with
 pytest or your local setup (make sure you are in the right directory).  The `tests` directory is set up 
 to import all functions from `computepac` using an `__init__` file.
+
+
+## TODO / Future Additions
+
+Some additional modules that I want to generalize and bring to this repository:
+- Runge-Kutta 2
+- Euler's method
+- FTCS
+- Finite Difference schemes
+- possibly some application examples in transport or diffusion equations
