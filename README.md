@@ -106,7 +106,6 @@ to import all functions from `computepac` using an `__init__` file.
 ## TODO / Future Additions
 
 Some additional modules that I want to generalize and bring to this repository:
-- Runge-Kutta 2
 - Euler's method
 - FTCS
 - Finite Difference schemes
