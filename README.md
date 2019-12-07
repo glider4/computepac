@@ -80,6 +80,34 @@ time.
 ```
 
 
+## euler
+Euler's method uses the derivative of an equation and an initial condition to estimate it at a future point.  It is 
+useful for estimating ODEs.  To estimate an ODE at a certain point, as long as you have an initial condition,
+run:
+
+```python
+import sympy as sym
+
+f = sym.Function('f')
+x1 = sym.Symbol('x1')
+x2 = sym.Symbol('x2')
+f = '''dy/dx equation with x1, x2 as x, y'''
+
+euler(f, x0, y0, lower bound, upper bound, num steps)
+```
+
+Again, use `f(x1,x2)` instead of `f(x,y)` in the SymPy function so that the program runs properly.
+The output format is a (n-large) list of numerical approximations between the bounds given, and the computational
+time.
+
+```python
+[[y_values], total_time]
+```
+
+I tested this module with the ODE `dy/dx = 6 - 2*(x2/x1)`, with `y(3) = 1`, and the result of 
+`euler` at `y(12)` was `23.6866111025435`.  The exact solution is `23.6875`.
+
+
 ## Examples
 ### Convergence Test
 I built a simple convergence test to see if the Bisection and Newton methods would converge to the same root given
