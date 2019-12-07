@@ -80,6 +80,16 @@ time.
 ```
 
 
+## Examples
+### Convergence Test
+I built a simple convergence test to see if the Bisection and Newton methods would converge to the same root given
+the same equation.  The function I chose was `6x^3 + 4x^2 + x + 1`.  The bounds were set as `[-10,10]` for Bisection and a guess of `0` for Newton's method.  The 
+results are given below.
+
+![convergence-results-text](./plots/convergence_example_text.png)
+![convergence-results-plot](./plots/convergence_example.png)
+
+
  ## How to run tests
 This package uses `pytest` for unit testing.
 
