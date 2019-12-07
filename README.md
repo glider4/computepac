@@ -144,7 +144,6 @@ to import all functions from `computepac` using an `__init__` file.
 ## TODO / Future Additions
 
 Some additional modules that I want to generalize and bring to this repository:
-- Euler's method
 - FTCS
 - Finite Difference schemes
 - possibly some application examples in transport or diffusion equations
