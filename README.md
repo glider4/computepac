@@ -54,9 +54,10 @@ and the total time the program needed for computation.
 ```
 
 
-## runge_kutta_four
+## runge_kutta_two & runge_kutta_four
 Runge Kutta is an iterative scheme that approximates numerical solutions to ordinary differential equations.  To 
-approximate an ODE between two boundaries, if you know the initial conditions (`x0` and `y0`), run:
+approximate an ODE between two boundaries, if you know the initial conditions (`x0` and `y0`), you can run either
+`rktwo` or `rkfour`.  Runge-Kutta second order should produce less accurate results than Runge-Kutta fourth order:
 
 ```python
 import sympy as sym
@@ -66,6 +67,7 @@ x1 = sym.Symbol('x1')
 x2 = sym.Symbol('x2')
 f = '''YOUR EQUATION with x1, x2 as x, y'''
 
+rktwo(f, x0, y0, lower bound, upper bound, num steps)
 rkfour(f, x0, y0, lower bound, upper bound, num steps)
 ```
 
