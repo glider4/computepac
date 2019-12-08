@@ -1,5 +1,7 @@
 # Euler's method iterative scheme to estimate ODE
 # Knowing initial conditions x0 and y0
+# You have to know the DERIVATIVE of the function to utilize this method
+# Ex. you know dy/dx and a certain point like y(3) = 1.
 #
 # To run, use:
 #
