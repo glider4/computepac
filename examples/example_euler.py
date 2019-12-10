@@ -1,13 +1,16 @@
 # Example using Euler to estimate an ODE
-# Equation:
+#
+# Equation to estimate:s
+#
 #   dy/dx = 6 - 2 * (y/x)
 #
 #   We know the solution at y(3) is 1
-#   I want to know the solution at y(12)
+#   We want to know the solution at y(12)
 #
 #   The exact solution is known y(12) = 23.6875
 #
-# How to run:
+# How to run this example:
+#
 #   Use example_euler(n), where n = number of iterations
 #   Note that this example is hard coded for one ODE
 #
