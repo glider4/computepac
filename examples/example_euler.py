@@ -7,6 +7,10 @@
 #
 #   The exact solution is known y(12) = 23.6875
 #
+# How to run:
+#   Use example_euler(n), where n = number of iterations
+#   Note that this example is hard coded for one ODE
+#
 
 import sympy as sym
 from computepac import euler
