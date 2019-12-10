@@ -19,13 +19,13 @@ import time
 
 
 # Note this is using Heun's constants
-def rktwo(f, x, y, a, b, n):  # function, x0, y0, lower bound, upper bound, num steps
+def rktwo(f, x, y, a, b, n):    # function, x0, y0, lower bound, upper bound, num steps
     x1 = sym.Symbol('x1')
     x2 = sym.Symbol('x2')
     start_time = time.time()
 
-    p = 0  # flag
-    h = (b - a) / n  # step size
+    p = 0                       # flag
+    h = (b - a) / n             # step size
 
     x_val = []
     y_val = []
