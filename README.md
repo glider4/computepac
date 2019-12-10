@@ -104,9 +104,6 @@ time.
 [[y_values], total_time]
 ```
 
-I tested this module with the ODE `dy/dx = 6 - 2*(x2/x1)`, with `y(3) = 1`, and the result of 
-`euler` at `y(12)` was `23.6866111025435`.  The exact solution is `23.6875`.
-
 
 ## Examples
 ### Convergence Test
@@ -116,6 +113,21 @@ results are given below.
 
 ![convergence-results-text](./plots/convergence_example_text.png)
 ![convergence-results-plot](./plots/convergence_example.png)
+
+
+### Euler Example
+I tested this module with the ODE `dy/dx = 6 - 2*(y/x)`, with `y(3) = 1`, attempting to use
+`euler` to estimate `y(12)`.  The exact solution is known as `23.6875`.
+
+The program returned the following:
+
+##### 1,000 iterations:
+
+![euler-example-text](plots/euler_example_1000.png)
+
+##### 10,000 iterations:
+
+![euler-example-text](plots/euler_example_10000.png)
 
 
  ## How to run tests
