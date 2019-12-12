@@ -80,7 +80,7 @@ time.
 ```
 
 
-## euler
+## euler_forward, backward
 Euler's method uses the derivative of an equation and an initial condition to estimate it at a future point.  It is 
 useful for estimating ODEs.  To estimate an ODE at a certain point, as long as you have an initial condition,
 run:
@@ -93,7 +93,7 @@ x1 = sym.Symbol('x1')
 x2 = sym.Symbol('x2')
 f = '''dy/dx equation with x1, x2 as x, y'''
 
-euler(f, x0, y0, lower bound, upper bound, num steps)
+euler_[ ](f, x0, y0, lower bound, upper bound, num steps)
 ```
 
 Again, use `f(x1,x2)` instead of `f(x,y)` in the SymPy function so that the program runs properly.
@@ -119,7 +119,7 @@ results are given below.
 I tested this module with the ODE `dy/dx = 6 - 2*(y/x)`, with `y(3) = 1`, attempting to use
 `euler` to estimate `y(12)`.  The exact solution is known as `23.6875`.
 
-The program returned the following:
+The forwards program returned the following:
 
 ##### 1,000 iterations:
 
