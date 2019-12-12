@@ -54,7 +54,7 @@ and the total time the program needed for computation.
 ```
 
 
-## runge_kutta_two & runge_kutta_four
+## runge_kutta_two; runge_kutta_four
 Runge Kutta is an iterative scheme that approximates numerical solutions to ordinary differential equations.  To 
 approximate an ODE between two boundaries, if you know the initial conditions (`x0` and `y0`), you can run either
 `rktwo` or `rkfour`.  Runge-Kutta second order should produce less accurate results than Runge-Kutta fourth order:

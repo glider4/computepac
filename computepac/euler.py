@@ -1,4 +1,4 @@
-# Euler's method iterative scheme to estimate ODE
+# Euler's method iterative scheme to estimate ODE - EXPLICIT (Forward)
 # Knowing initial conditions x0 and y0
 # You have to know the DERIVATIVE of the function to utilize this method
 # Ex. you know dy/dx and a certain point like y(3) = 1.
@@ -20,7 +20,7 @@ import sympy as sym
 import time
 
 
-def euler(f, x, y, a, b, n):    # function, x0, y0, lower bound, upper bound, num steps
+def euler_forward(f, x, y, a, b, n):    # function, x0, y0, lower bound, upper bound, num steps
     x1 = sym.Symbol('x1')
     x2 = sym.Symbol('x2')
     start_time = time.time()

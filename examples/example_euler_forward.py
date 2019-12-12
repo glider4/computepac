@@ -16,7 +16,7 @@
 #
 
 import sympy as sym
-from computepac import euler
+from computepac import euler_forward
 
 
 def example_euler(n):
@@ -26,7 +26,7 @@ def example_euler(n):
     x2 = sym.Symbol('x2')
     f = 6 - 2 * (x2 / x1)
 
-    result = euler(f, 3, 1, 3, 12, n)
+    result = euler_forward(f, 3, 1, 3, 12, n)
 
     print("\nResult of", n, "iterations of Euler's method to estimate f(12) =", result[0][n-1])
     print("Time for computation", round(result[1], 3), "seconds")
