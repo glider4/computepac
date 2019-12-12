@@ -1,4 +1,3 @@
-import pytest
 import sympy as sym
 from computepac import rkfour
 
