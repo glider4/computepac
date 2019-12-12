@@ -121,7 +121,8 @@ results are given below.
 
 ### Euler Example
 I tested this module with the ODE `dy/dx = 6 - 2*(y/x)`, with `y(3) = 1`, attempting to use
-`euler_forward` to estimate `y(12)`.  The exact solution is known as `23.6875`.
+`euler_forward` and `euler_backward` to estimate `y(12)`.  The exact solution is known as `23.6875`.  The 
+forward method performed much better in both 1,000 and 10,000 iteration computations.
 
 The programs returned the following:
 
