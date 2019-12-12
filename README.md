@@ -100,6 +100,10 @@ Again, use `f(x1,x2)` instead of `f(x,y)` in the SymPy function so that the prog
 The output format is a (n-large) list of numerical approximations between the bounds given, and the computational
 time.
 
+The value added in using `euler_backward` over `euler_foward` is that the scheme is stable even with a step-size 
+that's too small.  For example, running the forwards euler scheme with a very limited number of steps will result in 
+sawtoothing / instability.
+
 ```python
 [[y_values], total_time]
 ```
@@ -117,9 +121,9 @@ results are given below.
 
 ### Euler Example
 I tested this module with the ODE `dy/dx = 6 - 2*(y/x)`, with `y(3) = 1`, attempting to use
-`euler` to estimate `y(12)`.  The exact solution is known as `23.6875`.
+`euler_forward` to estimate `y(12)`.  The exact solution is known as `23.6875`.
 
-The forwards program returned the following:
+The forward program returned the following:
 
 ##### 1,000 iterations:
 
