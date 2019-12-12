@@ -100,13 +100,13 @@ Again, use `f(x1,x2)` instead of `f(x,y)` in the SymPy function so that the prog
 The output format is a (n-large) list of numerical approximations between the bounds given, and the computational
 time.
 
-The value added in using `euler_backward` over `euler_foward` is that the scheme is stable even with a step-size 
-that's too small.  For example, running the forwards euler scheme with a very limited number of steps will result in 
-sawtoothing / instability.
-
 ```python
 [[y_values], total_time]
 ```
+
+The value added in using `euler_backward` over `euler_foward` is that the scheme is stable even with a step-size 
+that's too small.  For example, running the forwards euler scheme with a very limited number of steps will result in 
+sawtoothing / instability.
 
 
 ## Examples
