@@ -1,6 +1,14 @@
 # computepac
 A Python package of mathematical functions, iterative solvers, numerical analysis, and more.
 
+Root finding:
+- Newton-Raphson method
+- Bisection method
+
+Differential equation estimating:
+- Runge-Kutta methods (RK2 and RK4)
+- Euler's schemes (Forward / Explicit and Backward / Implicit)
+
 ## bisection
 The Bisection method is an iterative numerical analysis scheme to find the roots of an equation.
 
