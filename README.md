@@ -123,7 +123,7 @@ results are given below.
 I tested this module with the ODE `dy/dx = 6 - 2*(y/x)`, with `y(3) = 1`, attempting to use
 `euler_forward` to estimate `y(12)`.  The exact solution is known as `23.6875`.
 
-The forward program returned the following:
+The programs returned the following:
 
 ##### 1,000 iterations:
 
