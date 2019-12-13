@@ -30,10 +30,6 @@
 #            return 0.1 + z*(x - 14)
 #
 #        abm_comp(f1, f2, f3, 0, 15, 15, 36, 0, 100, 10000)
-#        plot(0, 100, 10000)
-#
-# You can un-comment the "plot" function call in abm_comp if you want it
-# to auto-plot the results
 #
 # Output will be 3D matplotlib plot if you do this
 #
@@ -49,7 +45,7 @@ def abm_comp(f1, f2, f3, t0, x0, y0, z0, a, b, n):
     global params
     params = [t0, x0, y0, z0]
 
-    # plot(a, b, n)
+    plot(a, b, n)
 
 
 # derivative functions

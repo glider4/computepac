@@ -8,6 +8,49 @@ Root finding:
 Differential equation estimating:
 - Runge-Kutta methods (RK2 and RK4)
 - Euler's schemes (Forward / Explicit and Backward / Implicit)
+- Adams-Bashforth-Moulton method (RK4 implementation) for triple ODE dynamical systems
+
+
+## dynamic_triple
+This module uses the Adams-Bashforth-Moulton method, which uses Runge-Kutta 4th order for initial estimations, then
+builds off of those in an iterative scheme to predict a triple ODE dynamical system.
+
+Systems I have tested with this code:
+- Rossler Attractor dynamical system
+- Lorenz Attractor dynamical system
+
+To run this module, you need a system of 3 dynamical ODE's.  This module does *not* use SymPy, so make sure to
+verify that you've typed in the equations correctly.  Input the 3 functions as f1, f2, and f3, and then call 
+`abm_comp` for a 3D plot of the solution.
+
+This is the Rossler Attractor:
+
+```python
+def f1(x, y, z):
+    return (-1)*y - z
+
+def f2(x, y, z):
+    return x + (0.1)*y
+
+def f3(x, y, z):
+    return 0.1 + z*(x - 14)
+
+abm_comp(f1, f2, f3, 0, 15, 15, 36, 0, 100, 10000)
+# func1, func2, func3, initial t0, x0, y0, z0, lower bound, upper, num iterations
+```
+
+This example produces the following 3D plot:
+
+![rossler3D](./plots/dynamic_triple_rossler.png)
+
+You can run `adams(a, b, n)` or `rk(a, b, n)` also, which will result in a list of computational results, which
+can then be analyzed or plotted.  Comparing RK4's estimation and ABM's is also interesting.  Output of these two 
+functions is as follows:
+
+```python
+[[xvals], [yvals], [zvals]]
+```
+
 
 ## bisection
 The Bisection method is an iterative numerical analysis scheme to find the roots of an equation.
