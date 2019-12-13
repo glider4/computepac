@@ -186,6 +186,13 @@ The programs returned the following:
 ![euler-example-text](plots/euler_example_10000.png)
 
 
+### Dynamic Triple Example w/ Lorenz Attractor
+The Lorenz system is a system of 3 ODE's that is famous for the "butterfly" pattern that it results in.
+
+Using 1000 iterations of Adams-Bashforth-Moulton:
+![lorenz-abm](./plots/dynamic_triple_lorenz.png)
+
+
  ## How to run tests
 This package uses `pytest` for unit testing.
 

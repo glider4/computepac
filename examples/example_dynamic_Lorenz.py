@@ -5,6 +5,7 @@
 
 from computepac import *
 
+
 # Lorenz Attractor equations
 def f1(x, y, z):
     return 10 * (y - x)
