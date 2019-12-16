@@ -1,11 +1,11 @@
 # computepac
 A Python package of mathematical functions, iterative solvers, numerical analysis, and more.
 
-Root finding:
+### Root finding
 - Newton-Raphson method
 - Bisection method
 
-Differential equation estimating:
+### Differential equation estimating
 - Runge-Kutta methods (RK2 and RK4)
 - Euler's schemes (Forward / Explicit and Backward / Implicit)
 - Adams-Bashforth-Moulton method (RK4 implementation) for triple ODE dynamical systems
