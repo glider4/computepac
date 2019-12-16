@@ -75,7 +75,7 @@ functions is as follows:
 ```
 
 
-## bisection
+## [bisection](./computepac/bisection.py)
 The Bisection method is an iterative numerical analysis scheme to find the roots of an equation.
 
 To find the root of your equation between a certain lower and upper bound, run:
@@ -106,7 +106,7 @@ and the total time the program needed for computation.
 Note that `sympy.plot(f)` can be used to plot any of your inputted functions to verify or explore roots.
 
 
-## newton_raphson
+## [newton_raphson](./computepac/newton_raphson.py)
 The Newton-Raphson Method (or just Newton's Method) is an iterative scheme using derivatives to find
 the root of a function.  To find the root of your equation, make a guess as to where it is, and run:
 
@@ -128,7 +128,7 @@ and the total time the program needed for computation.
 ```
 
 
-## runge_kutta_two; runge_kutta_four
+## [runge_kutta_two](./computepac/runge_kutta_two.py)  &  [runge_kutta_four](./computepac/runge_kutta_four.py)
 Runge Kutta is an iterative scheme that approximates numerical solutions to ordinary differential equations.  To 
 approximate an ODE between two boundaries, if you know the initial conditions (`x0` and `y0`), you can run either
 `rktwo` or `rkfour`.  Runge-Kutta second order should produce less accurate results than Runge-Kutta fourth order:
@@ -154,7 +154,7 @@ time.
 ```
 
 
-## euler_forward, backward
+## [euler_forward](./computepac/euler.py)  &  [backward](./computepac/euler.py)
 Euler's method uses the derivative of an equation and an initial condition to estimate it at a future point.  It is 
 useful for estimating ODEs.  To estimate an ODE at a certain point, as long as you have an initial condition,
 run:
@@ -184,7 +184,7 @@ sawtoothing / instability.
 
 
 ## Examples
-### Convergence Test (bisection & newton_raphson)
+### [Convergence Test](./examples/example_convergence.py) (bisection & newton_raphson)
 I built a simple convergence test to see if the Bisection and Newton methods would converge to the same root given
 the same equation.  The function I chose was `6x^3 + 4x^2 + x + 1`.  The bounds were set as `[-10,10]` for Bisection and a guess of `0` for Newton's method.  The 
 results are given below.
@@ -193,7 +193,7 @@ results are given below.
 ![convergence-results-plot](./plots/convergence_example.png)
 
 
-### Euler Example
+### [Euler Example](./examples/example_euler.py)
 I tested this module with the ODE `dy/dx = 6 - 2*(y/x)`, with `y(3) = 1`, attempting to use
 `euler_forward` and `euler_backward` to estimate `y(12)`.  The exact solution is known as `23.6875`.  The 
 forward method performed much better in both 1,000 and 10,000 iteration computations.
@@ -209,7 +209,7 @@ The programs returned the following:
 ![euler-example-text](plots/euler_example_10000.png)
 
 
-### Dynamic Triple Example w/ Lorenz Attractor
+### [Dynamic Triple Example](./examples/example_dynamic_Lorenz.py) w/ Lorenz Attractor
 The Lorenz system is a system of 3 ODE's that is famous for the "butterfly" pattern that it results in.
 
 Using 1000 iterations of Adams-Bashforth-Moulton:
