@@ -10,6 +10,29 @@ Differential equation estimating:
 - Euler's schemes (Forward / Explicit and Backward / Implicit)
 - Adams-Bashforth-Moulton method (RK4 implementation) for triple ODE dynamical systems
 
+### Purpose of SymPy integration
+I integrated SymPy (Symbolic Python) into this package to make it easy to validate mathematical functions
+after typing them as code.  For example, the following code in Python is hard to determine the function
+that is being analyzed.  But, simply by importing SymPy and typing the name of the function, I can see that the
+function is precisely how I want it to be.  For larger systems and complex equations with lots of parentheses,
+this is highly desirable to me.  In terms of actual coding, this is not necessary, however, and some modules (like
+dynamic_triple) will use `def func(x, y)` instead.
+
+SymPy equation example:
+```python
+import sympy as sym
+
+f = sym.Function('f')
+x = sym.Symbol('x')
+y = sym.Symbol('y')
+
+f = (4*y - x/2) * sym.exp(1)**(2*x**2) + sym.cos(12*y/x + 8)
+```
+
+Running `f` in Spyder results in the nicely formatted equation printed in the console.
+
+![sympy_example](plots/sympy_example.png)
+
 
 ## dynamic_triple
 This module uses the Adams-Bashforth-Moulton method, which uses Runge-Kutta 4th order for initial estimations, then
