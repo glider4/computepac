@@ -192,6 +192,9 @@ The Lorenz system is a system of 3 ODE's that is famous for the "butterfly" patt
 Using 1000 iterations of Adams-Bashforth-Moulton:
 ![lorenz-abm](./plots/dynamic_triple_lorenz.png)
 
+For more plots of Lorenz using ABM, see my [ABM Lorenz repository](https://github.com/mathemacode/Adams-Bashforth-Moulton_LORENZ) -
+the code there is *not* generalized, as it was built just for Lorenz.  I generalized the algorithm for use in this project.
+
 
  ## How to run tests
 This package uses `pytest` for unit testing.
