@@ -34,7 +34,7 @@ Running `f` in Spyder results in the nicely formatted equation printed in the co
 ![sympy_example](plots/sympy_example.png)
 
 
-## dynamic_triple
+## [dynamic_triple](./computepac/dynamic_triple.py)
 This module uses the Adams-Bashforth-Moulton method, which uses Runge-Kutta 4th order for initial estimations, then
 builds off of those in an iterative scheme to predict a triple ODE dynamical system.
 
