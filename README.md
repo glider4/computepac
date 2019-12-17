@@ -26,7 +26,7 @@ f = sym.Function('f')
 x = sym.Symbol('x')
 y = sym.Symbol('y')
 
-f = (4*y - x/2) * sym.exp(1)**(2*x**2) + sym.cos(12*y/x + 8)
+f = (4*y - x/2) * sym.exp(2*x**2) + sym.cos(12*y/x + 8)
 ```
 
 Running `f` in Spyder results in the nicely formatted equation printed in the console.
