@@ -200,11 +200,11 @@ forward method performed much better in both 1,000 and 10,000 iteration computat
 
 The programs returned the following:
 
-##### 1,000 iterations:
+#### 1,000 iterations:
 
 ![euler-example-text](plots/euler_example_1000.png)
 
-##### 10,000 iterations:
+#### 10,000 iterations:
 
 ![euler-example-text](plots/euler_example_10000.png)
 
