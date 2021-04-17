@@ -7,8 +7,12 @@
 # Input t, x, y, z initial conditions
 # Input a, b, n as lower bound, upper bound, num iterations
 #
-# Can run plot(a, b, n) to see results.  Can also run
-# rk() or adams() by themselves, they output a list of lists
+# This file is a Class structure so you must instantiate it first,
+# ex: my_abm_calculation = ABM( enter all params here ), then call the
+# other methods ex.: my_abm_calculation.plot3d()
+#
+# Can run ABM.plot() to see results.  Can also run
+# ABM.rk() or ABM.adams() by themselves, they output a list of lists
 # result = [[xvals], [yvals], [zvals]] for plotting or analysis
 #
 # Note line in plot() that specifies RK vs. ABM results.  You can
@@ -242,8 +246,8 @@ class ABM:
 
         return [x1, x2, x3]
 
-    def plot3d(self):  # lower bound, upper bound, num iterations
-        # res = rk(a, b, n)
+    def plot3d(self):
+        # res = self.rk()  # to compare to RK solution only
         res = self.adams()
 
         # Plotting
