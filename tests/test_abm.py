@@ -1,5 +1,3 @@
-import sympy as sym
-from computepac import bisection
 from computepac.utils.utilities import Utilities
 from computepac.dynamic_triple import ABM
 
