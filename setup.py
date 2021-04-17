@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="computepac",
-    version="1.0",
+    version="1.5",
     description="A Python package of mathematical functions, iterative solvers, numerical analysis, and more.",
     url="https://github.com/mathemacode/compute-pac",
     author="mathemacode",
