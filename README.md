@@ -68,7 +68,7 @@ This example produces the following 3D plot:
 
 ![rossler3D](./plots/dynamic_triple_rossler.png)
 
-You can run `adams(a, b, n)` or `rk(a, b, n)` also, which will result in a list of computational results, which
+You can run `adams()` or `rk()` also, which will result in a list of computational results, which
 can then be analyzed or plotted.  Comparing RK4's estimation and ABM's is also interesting.  Output of these two 
 functions is as follows:
 
