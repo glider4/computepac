@@ -4,7 +4,7 @@ class Utilities:
 
     @staticmethod
     def calc_relative_error(calculated_val: float, correct_val: float) -> float:
-        error = ((correct_val - calculated_val)/correct_val)*100
+        error = ((correct_val - calculated_val) / correct_val) * 100
         return error
 
     @staticmethod

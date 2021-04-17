@@ -2,7 +2,7 @@
 
 
 def mult_zero(x):
-    return x*0
+    return x * 0
 
 
 class Test:

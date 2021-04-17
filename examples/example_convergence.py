@@ -36,9 +36,9 @@ def convergence(f, acc):
     plot(f)
 
 
-if __name__ == '__main__':
-    x = Symbol('x')
-    f = Function('f')
+if __name__ == "__main__":
+    x = Symbol("x")
+    f = Function("f")
 
     f = 6 * x ** 3 + 4 * x ** 2 + x + 1  # Enter function to find roots of
 
