@@ -22,7 +22,7 @@ import sympy as sym
 import time
 
 
-def euler_forward(f, x, y, a, b, n):    # function, x0, y0, lower bound, upper bound, num steps
+def euler_forward(f, x, y, a, b, n) -> list:    # function, x0, y0, lower bound, upper bound, num steps
     x1 = sym.Symbol('x1')
     x2 = sym.Symbol('x2')
     start_time = time.time()
@@ -48,7 +48,7 @@ def euler_forward(f, x, y, a, b, n):    # function, x0, y0, lower bound, upper b
     return [y_val, total_time]
 
 
-def euler_backward(f, x, y, a, b, n):   # function, x0, y0, lower bound, upper bound, num steps
+def euler_backward(f, x, y, a, b, n) -> list:   # function, x0, y0, lower bound, upper bound, num steps
     x1 = sym.Symbol('x1')
     x2 = sym.Symbol('x2')
     start_time = time.time()

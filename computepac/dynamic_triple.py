@@ -61,7 +61,7 @@ def x3p(x1, x2, x3):
     return f3(x1, x2, x3)
 
 
-def adams(a, b, n):  # A-B-M computation, using RK4 to start
+def adams(a, b, n) -> list:  # A-B-M computation, using RK4 to start
 
     h = (b - a) / n
     y1 = np.zeros(n)  # initialize y1, y2, y3 matrices (and y_predictors)
@@ -121,7 +121,7 @@ def adams(a, b, n):  # A-B-M computation, using RK4 to start
     return [y1, y2, y3]
 
 
-def rk(a, b, n, whichy=9, whichx=9):  # Runge-Kutta 4 computation by itself
+def rk(a, b, n, whichy=9, whichx=9) -> list:  # Runge-Kutta 4 computation by itself
     # a lower bound
     # b upper bound
     # n number of steps

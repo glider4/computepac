@@ -17,7 +17,7 @@ import sympy as sym
 import time
 
 
-def bisection(f, a, b, acc):
+def bisection(f, a, b, acc) -> list:
     x = sym.Symbol('x')
     start_time = time.time()                    # start timer
     error = 10                                  # before assignment in while loop

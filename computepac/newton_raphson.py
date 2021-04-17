@@ -17,7 +17,7 @@ import sympy as sym
 import time
 
 
-def newton_raphson(f, g, acc):
+def newton_raphson(f, g, acc) -> list:
     x = sym.Symbol('x')             # set up x as symbol for functions below
     start_time = time.time()
     f_prime = sym.diff(f)           # derivative of inputted function

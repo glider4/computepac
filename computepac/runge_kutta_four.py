@@ -18,7 +18,7 @@ import sympy as sym
 import time
 
 
-def rkfour(f, x, y, a, b, n):  # function, x0, y0, lower bound, upper bound, num steps
+def rkfour(f, x, y, a, b, n) -> list:  # function, x0, y0, lower bound, upper bound, num steps
     x1 = sym.Symbol('x1')
     x2 = sym.Symbol('x2')
     start_time = time.time() 
