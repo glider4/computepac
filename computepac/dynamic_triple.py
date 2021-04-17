@@ -45,7 +45,19 @@ import matplotlib.pyplot as plt
 
 
 class ABM:
-    def __init__(self, f1, f2, f3, t0: float, x0: float, y0: float, z0: float, a: float, b: float, n: int):
+    def __init__(
+        self,
+        f1,
+        f2,
+        f3,
+        t0: float,
+        x0: float,
+        y0: float,
+        z0: float,
+        a: float,
+        b: float,
+        n: int,
+    ):
         # function 1, func2, func3, initial t0, x0, y0, z0, lower bound, upper, num iterations
         self.f1 = f1
         self.f2 = f2
@@ -168,7 +180,9 @@ class ABM:
 
         return [y1, y2, y3]
 
-    def rk(self, which_y: int = 9, which_x: int = 9) -> list:  # Runge-Kutta 4 computation by itself
+    def rk(
+        self, which_y: int = 9, which_x: int = 9
+    ) -> list:  # Runge-Kutta 4 computation by itself
         # which_y indicator for which Y1, Y2, Y3 val is needed to be return by function
         # which_x means x1, x2, x3 when calling for values Y1, Y2, Y3, etc...
 
