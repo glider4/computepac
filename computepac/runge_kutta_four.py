@@ -18,13 +18,15 @@ import sympy as sym
 import time
 
 
-def rkfour(f, x, y, a, b, n) -> list:  # function, x0, y0, lower bound, upper bound, num steps
-    x1 = sym.Symbol('x1')
-    x2 = sym.Symbol('x2')
-    start_time = time.time() 
+def rkfour(
+    f, x, y, a, b, n
+) -> list:  # function, x0, y0, lower bound, upper bound, num steps
+    x1 = sym.Symbol("x1")
+    x2 = sym.Symbol("x2")
+    start_time = time.time()
 
-    p = 0                       # flag
-    h = (b - a) / n             # step size
+    p = 0  # flag
+    h = (b - a) / n  # step size
 
     x_val = []
     y_val = []
@@ -43,8 +45,8 @@ def rkfour(f, x, y, a, b, n) -> list:  # function, x0, y0, lower bound, upper bo
         y = y + ((1 / 6) * (k0 + (2 * k1) + (2 * k2) + k3))
 
         p += 1
-        
+
     end_time = time.time()
-    total_time = end_time-start_time
+    total_time = end_time - start_time
 
     return [y_val, total_time]

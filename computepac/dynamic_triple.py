@@ -80,43 +80,76 @@ def adams(a, b, n) -> list:  # A-B-M computation, using RK4 to start
     for i in range(4, n):  # Equations change slightly, hard to refactor to make clean
 
         # x1p
-        y_pred1[i] = y1[i - 1] + (h / 24 * (55 *
-                                            x1p(y1[i - 1], y2[i - 1], y3[i - 1]) - 59 *
-                                            x1p(y1[i - 2], y2[i - 2], y3[i - 2]) + 37 *
-                                            x1p(y1[i - 3], y2[i - 3], y3[i - 3]) - 9 * 0))
+        y_pred1[i] = y1[i - 1] + (
+            h
+            / 24
+            * (
+                55 * x1p(y1[i - 1], y2[i - 1], y3[i - 1])
+                - 59 * x1p(y1[i - 2], y2[i - 2], y3[i - 2])
+                + 37 * x1p(y1[i - 3], y2[i - 3], y3[i - 3])
+                - 9 * 0
+            )
+        )
 
         # x1p
-        y1[i] = y1[i - 1] + (h / 24 * (9 *
-                                       x1p(y_pred1[i - 1], y_pred2[i - 1], y_pred3[i - 1]) + 19 *
-                                       x1p(y1[i - 1], y2[i - 1], y3[i - 1]) - 5 *
-                                       x1p(y1[i - 2], y2[i - 2], y3[i - 2]) +
-                                       x1p(y1[i - 3], y2[i - 3], y3[i - 3])))
+        y1[i] = y1[i - 1] + (
+            h
+            / 24
+            * (
+                9 * x1p(y_pred1[i - 1], y_pred2[i - 1], y_pred3[i - 1])
+                + 19 * x1p(y1[i - 1], y2[i - 1], y3[i - 1])
+                - 5 * x1p(y1[i - 2], y2[i - 2], y3[i - 2])
+                + x1p(y1[i - 3], y2[i - 3], y3[i - 3])
+            )
+        )
 
         # x2p
-        y_pred2[i] = y2[i - 1] + (h / 24 * (55 *
-                                            x2p(y1[i - 1], y2[i - 1], y3[i - 1]) - 59 *
-                                            x2p(y1[i - 2], y2[i - 2], y3[i - 2]) + 37 *
-                                            x2p(y1[i - 3], y2[i - 3], y3[i - 3]) - 9 * (15 * (-8) - 15)))
+        y_pred2[i] = y2[i - 1] + (
+            h
+            / 24
+            * (
+                55 * x2p(y1[i - 1], y2[i - 1], y3[i - 1])
+                - 59 * x2p(y1[i - 2], y2[i - 2], y3[i - 2])
+                + 37 * x2p(y1[i - 3], y2[i - 3], y3[i - 3])
+                - 9 * (15 * (-8) - 15)
+            )
+        )
 
         # x2p
-        y2[i] = y2[i - 1] + (h / 24 * (9 *
-                                       x2p(y_pred1[i - 1], y_pred2[i - 1], y_pred3[i - 1]) + 19 *
-                                       x2p(y1[i - 1], y2[i - 1], y3[i - 1]) - 5 *
-                                       x2p(y1[i - 2], y2[i - 2], y3[i - 2]) +
-                                       x2p(y1[i - 3], y2[i - 3], y3[i - 3])))
+        y2[i] = y2[i - 1] + (
+            h
+            / 24
+            * (
+                9 * x2p(y_pred1[i - 1], y_pred2[i - 1], y_pred3[i - 1])
+                + 19 * x2p(y1[i - 1], y2[i - 1], y3[i - 1])
+                - 5 * x2p(y1[i - 2], y2[i - 2], y3[i - 2])
+                + x2p(y1[i - 3], y2[i - 3], y3[i - 3])
+            )
+        )
 
         # x3p
-        y_pred3[i] = y3[i - 1] + (h / 24 * (55 *
-                                            x3p(y1[i - 1], y2[i - 1], y3[i - 1]) - 59 *
-                                            x3p(y1[i - 2], y2[i - 2], y3[i - 2]) + 37 *
-                                            x3p(y1[i - 3], y2[i - 3], y3[i - 3]) - 9 * ((15 * 15) - ((8 / 3) * 36))))
+        y_pred3[i] = y3[i - 1] + (
+            h
+            / 24
+            * (
+                55 * x3p(y1[i - 1], y2[i - 1], y3[i - 1])
+                - 59 * x3p(y1[i - 2], y2[i - 2], y3[i - 2])
+                + 37 * x3p(y1[i - 3], y2[i - 3], y3[i - 3])
+                - 9 * ((15 * 15) - ((8 / 3) * 36))
+            )
+        )
 
         # x3p
-        y3[i] = y3[i - 1] + (h / 24 * (9 *
-                                       x3p(y_pred1[i - 1], y_pred2[i - 1], y_pred3[i - 1]) + 19 *
-                                       x3p(y1[i - 1], y2[i - 1], y3[i - 1]) - 5 *
-                                       x3p(y1[i - 2], y2[i - 2], y3[i - 2]) +
-                                       x3p(y1[i - 3], y2[i - 3], y3[i - 3])))
+        y3[i] = y3[i - 1] + (
+            h
+            / 24
+            * (
+                9 * x3p(y_pred1[i - 1], y_pred2[i - 1], y_pred3[i - 1])
+                + 19 * x3p(y1[i - 1], y2[i - 1], y3[i - 1])
+                - 5 * x3p(y1[i - 2], y2[i - 2], y3[i - 2])
+                + x3p(y1[i - 3], y2[i - 3], y3[i - 3])
+            )
+        )
 
     return [y1, y2, y3]
 
@@ -154,13 +187,25 @@ def rk(a, b, n, whichy=9, whichx=9) -> list:  # Runge-Kutta 4 computation by its
         j[0] = h * x2p(x1[p], x2[p], x3[p])
         k[0] = h * x3p(x1[p], x2[p], x3[p])
 
-        i[1] = h * x1p(x1[p] + (1 / 2) * i[0], x2[p] + (1 / 2) * j[0], x3[p] + (1 / 2) * k[0])
-        j[1] = h * x2p(x1[p] + (1 / 2) * i[0], x2[p] + (1 / 2) * j[0], x3[p] + (1 / 2) * k[0])
-        k[1] = h * x3p(x1[p] + (1 / 2) * i[0], x2[p] + (1 / 2) * j[0], x3[p] + (1 / 2) * k[0])
+        i[1] = h * x1p(
+            x1[p] + (1 / 2) * i[0], x2[p] + (1 / 2) * j[0], x3[p] + (1 / 2) * k[0]
+        )
+        j[1] = h * x2p(
+            x1[p] + (1 / 2) * i[0], x2[p] + (1 / 2) * j[0], x3[p] + (1 / 2) * k[0]
+        )
+        k[1] = h * x3p(
+            x1[p] + (1 / 2) * i[0], x2[p] + (1 / 2) * j[0], x3[p] + (1 / 2) * k[0]
+        )
 
-        i[2] = h * x1p(x1[p] + (1 / 2) * i[1], x2[p] + (1 / 2) * j[1], x3[p] + (1 / 2) * k[1])
-        j[2] = h * x2p(x1[p] + (1 / 2) * i[1], x2[p] + (1 / 2) * j[1], x3[p] + (1 / 2) * k[1])
-        k[2] = h * x3p(x1[p] + (1 / 2) * i[1], x2[p] + (1 / 2) * j[1], x3[p] + (1 / 2) * k[1])
+        i[2] = h * x1p(
+            x1[p] + (1 / 2) * i[1], x2[p] + (1 / 2) * j[1], x3[p] + (1 / 2) * k[1]
+        )
+        j[2] = h * x2p(
+            x1[p] + (1 / 2) * i[1], x2[p] + (1 / 2) * j[1], x3[p] + (1 / 2) * k[1]
+        )
+        k[2] = h * x3p(
+            x1[p] + (1 / 2) * i[1], x2[p] + (1 / 2) * j[1], x3[p] + (1 / 2) * k[1]
+        )
 
         i[3] = h * x1p(x1[p] + i[2], x2[p] + j[2], x3[p] + k[2])
         j[3] = h * x2p(x1[p] + i[2], x2[p] + j[2], x3[p] + k[2])
@@ -193,11 +238,11 @@ def plot(a, b, n):  # lower bound, upper bound, num iterations
 
     # Plotting
     fig = plt.figure()
-    ax = fig.gca(projection='3d')
+    ax = fig.gca(projection="3d")
     ax.plot(res[0], res[1], res[2], linewidth=1.0, color="darkblue")
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
     ax.set_zlabel("Z")
     plt.title("Adams-Bashforth-Moutlon Estimation")
-    plt.style.use('ggplot')
+    plt.style.use("ggplot")
     plt.show()

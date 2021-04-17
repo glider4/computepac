@@ -6,5 +6,5 @@ from .euler import *
 from .dynamic_triple import *
 from computepac import *
 
-__author__ = 'mathemacode'
-__copyright__ = 'License in LICENSE.txt'
+__author__ = "mathemacode"
+__copyright__ = "License in LICENSE.txt"

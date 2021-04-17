@@ -18,14 +18,14 @@ import time
 
 
 def bisection(f, a, b, acc) -> list:
-    x = sym.Symbol('x')
-    start_time = time.time()                    # start timer
-    error = 10                                  # before assignment in while loop
-    err = []                                    # to store errors
+    x = sym.Symbol("x")
+    start_time = time.time()  # start timer
+    error = 10  # before assignment in while loop
+    err = []  # to store errors
 
-    while error > acc:                          # if error still larger than desired accuracy
+    while error > acc:  # if error still larger than desired accuracy
 
-        m = (a + b) / 2                         # middle between bounds
+        m = (a + b) / 2  # middle between bounds
         ans = f.evalf(subs={x: m})
 
         if ans > 0:
@@ -39,8 +39,8 @@ def bisection(f, a, b, acc) -> list:
         err.append(error)
 
     end_time = time.time()
-    total_time = end_time-start_time
+    total_time = end_time - start_time
     num_itr = len(err)
     root = m
-    
+
     return [num_itr, root, total_time]

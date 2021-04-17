@@ -22,13 +22,15 @@ import sympy as sym
 import time
 
 
-def euler_forward(f, x, y, a, b, n) -> list:    # function, x0, y0, lower bound, upper bound, num steps
-    x1 = sym.Symbol('x1')
-    x2 = sym.Symbol('x2')
+def euler_forward(
+    f, x, y, a, b, n
+) -> list:  # function, x0, y0, lower bound, upper bound, num steps
+    x1 = sym.Symbol("x1")
+    x2 = sym.Symbol("x2")
     start_time = time.time()
 
-    p = 0                               # flag
-    h = (b - a) / n                     # step size
+    p = 0  # flag
+    h = (b - a) / n  # step size
 
     x_val = []
     y_val = []
@@ -48,13 +50,15 @@ def euler_forward(f, x, y, a, b, n) -> list:    # function, x0, y0, lower bound,
     return [y_val, total_time]
 
 
-def euler_backward(f, x, y, a, b, n) -> list:   # function, x0, y0, lower bound, upper bound, num steps
-    x1 = sym.Symbol('x1')
-    x2 = sym.Symbol('x2')
+def euler_backward(
+    f, x, y, a, b, n
+) -> list:  # function, x0, y0, lower bound, upper bound, num steps
+    x1 = sym.Symbol("x1")
+    x2 = sym.Symbol("x2")
     start_time = time.time()
 
-    p = 0                               # flag
-    h = (b - a) / n                     # step size
+    p = 0  # flag
+    h = (b - a) / n  # step size
 
     x_val = []
     y_val = []
@@ -65,7 +69,7 @@ def euler_backward(f, x, y, a, b, n) -> list:   # function, x0, y0, lower bound,
 
         x += h
         y_p = y + h * f.evalf(subs={x1: x, x2: y})
-        y = y + h * f.evalf(subs={x1: x+h, x2: y_p})
+        y = y + h * f.evalf(subs={x1: x + h, x2: y_p})
 
         p += 1
 

@@ -16,8 +16,7 @@ def f2(x, y, z):
 
 
 def f3(x, y, z):
-    return (x * y) - (8/3)*z
+    return (x * y) - (8 / 3) * z
 
 
 abm_comp(f1, f2, f3, 0, 15, 15, 36, 0, 20, 1000)
-
