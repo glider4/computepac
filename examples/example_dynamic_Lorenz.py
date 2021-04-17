@@ -19,4 +19,4 @@ def f3(x, y, z):
 
 
 res = ABM(f1, f2, f3, 0, 15, 15, 36, 0, 20, 1000)
-print(res.adams()[2][100])
+res.plot3d()
