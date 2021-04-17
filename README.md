@@ -43,8 +43,9 @@ Systems I have tested with this code:
 - Lorenz Attractor dynamical system
 
 To run this module, you need a system of 3 dynamical ODE's.  This module does *not* use SymPy, so make sure to
-verify that you've typed in the equations correctly.  Input the 3 functions as f1, f2, and f3, and then call 
-`abm_comp` for a 3D plot of the solution.
+verify that you've typed in the equations correctly.  Input the 3 functions as f1, f2, and f3, and then
+instantiate the class `ABM` as shown below.  To 3D plot. use ABM.plot3d().  To get numerical answers,
+use ABM.adams().
 
 This is the Rossler Attractor:
 
@@ -58,7 +59,7 @@ def f2(x, y, z):
 def f3(x, y, z):
     return 0.1 + z*(x - 14)
 
-abm_comp(f1, f2, f3, 0, 15, 15, 36, 0, 100, 10000)
+res = ABM(f1, f2, f3, 0, 15, 15, 36, 0, 100, 10000)
 # func1, func2, func3, initial t0, x0, y0, z0, lower bound, upper, num iterations
 ```
 
