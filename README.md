@@ -60,6 +60,7 @@ def f3(x, y, z):
     return 0.1 + z*(x - 14)
 
 res = ABM(f1, f2, f3, 0, 15, 15, 36, 0, 100, 10000)
+res.plot3d()
 # func1, func2, func3, initial t0, x0, y0, z0, lower bound, upper, num iterations
 ```
 
