@@ -6,7 +6,7 @@ setup(
     name="computepac",
     version="1.5",
     description="A Python package of mathematical functions, iterative solvers, numerical analysis, and more.",
-    url="https://github.com/mathemacode/compute-pac",
+    url="https://github.com/mathemacode/computepac",
     author="mathemacode",
     classifiers=["License :: GNU GPLv3" "Programming Language :: Python 3.7"],
     keywords="computational mathematics engineering numerical analysis finite difference iterative schemes",
