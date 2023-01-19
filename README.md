@@ -1,5 +1,5 @@
 # computepac
-A Python package of mathematical functions, iterative solvers, numerical analysis, and more.  Examples included in code and explained below.
+A Python package of mathematical functions, iterative solvers, numerical analysis, and more.  Examples included in code and explained below.  Installation and testing notes at end.
 
 **Last updated: January 2023.**
 
@@ -187,6 +187,16 @@ Using 1000 iterations of Adams-Bashforth-Moulton:
 
 For more plots of Lorenz using ABM, see my **[ABM Lorenz repository](https://github.com/glider4/Adams-Bashforth-Moulton_LORENZ)** - the code there is *not* generalized, as it was built just for Lorenz.  I generalized the algorithm for use in this project.
 
+# Installation and Testing
+
+## How to install requirements
+Your local environment must have the packages listed in `requirements.txt` installed.  In the main directory of the project, run:
+
+```commandline
+pip install -r requirements.txt
+```
+
+**If, by chance, years go by and I have not updated this file**, and packages are unavailable to download, install the package `pip-upgrade` and run `pip-upgrade` in the main project directory, it will find the latest packages and prompt to update them.  I cannot guarantee, however, that the tests will pass with newer versions of packages.
 
 ## How to run tests
 This package uses `pytest` for unit testing.
@@ -199,13 +209,13 @@ chmod +x test.sh
 ./test.sh
 ```
 
-Or, you can load the `computepac` package in PyCharm and simply type into the local terminal:
+Or, you can load the `computepac` package in PyCharm (or another IDE) and simply type into the local terminal:
 
 ```bash
 pytest
 ```
 
-All unit tests are located in the `tests` directory.  One sample test was built for debugging purposes (`test_sample.py`).  This unit test will always pass.  If it does not run, then something is wrong with pytest or your local setup (make sure you are in the right directory).  The `tests` directory is set up to import all functions from `computepac` using an `__init__` file.
+All unit tests are located in the `tests` directory.  One sample test was built for debugging purposes (`test_sample.py`).  This unit test will always pass if `pytest` is installed correctly.  If it does not run, then something is wrong with pytest or your local setup (make sure you are in the right directory).  The `tests` directory is set up to import all functions from `computepac` using an `__init__` file.
 
 ## TODO / Future Additions
 
