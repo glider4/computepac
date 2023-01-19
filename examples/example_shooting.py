@@ -31,7 +31,7 @@ print("   Z Value                 Solution")
 for i in range(0, 2):  # need extra tab spacing for first 2 lines
     print(" ", res[0][i], " \t\t\t\t", res[1][i])
 
-for i in range(2, 11):
+for i in range(2, n+1):
     print(" ", res[0][i], " \t", res[1][i])
 
 print("\nCompare to actual solution:", alpha)
