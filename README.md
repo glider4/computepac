@@ -187,6 +187,12 @@ Using 1000 iterations of Adams-Bashforth-Moulton:
 
 For more plots of Lorenz using ABM, see my **[ABM Lorenz repository](https://github.com/glider4/Adams-Bashforth-Moulton_LORENZ)** - the code there is *not* generalized, as it was built just for Lorenz.  I generalized the algorithm for use in this project.
 
+### [Shooting Method Example](./examples/example_shooting.py)
+
+To demonstrate the convergence of the shooting method and execution time, there is an example available which prints the following to the console.
+
+![shooting-example](plots/shooting_example.png)
+
 # Installation and Testing
 
 ## How to install requirements
