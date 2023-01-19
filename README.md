@@ -1,5 +1,7 @@
 # computepac
-A Python package of mathematical functions, iterative solvers, numerical analysis, and more.
+A Python package of mathematical functions, iterative solvers, numerical analysis, and more.  Examples included in code and explained below.
+
+**Last updated: January 2023.**
 
 ### Root finding
 - Newton-Raphson method
