@@ -159,6 +159,10 @@ Again, use `f(x1,x2)` instead of `f(x,y)` in the SymPy function so that the prog
 
 The value added in using `euler_backward` over `euler_foward` is that the scheme is stable even with a step-size that's too small.  For example, running the forwards euler scheme with a very limited number of steps will result in sawtoothing / instability.
 
+## [Shooting Method](./computepac/shooting_method.py)
+
+**To be updated**
+
 ## Examples
 ### [Convergence Test](./examples/example_convergence.py) (bisection & newton_raphson)
 I built a simple convergence test to see if the Bisection and Newton methods would converge to the same root given the same equation.  The function I chose was `6x^3 + 4x^2 + x + 1`.  The bounds were set as `[-10,10]` for Bisection and a guess of `0` for Newton's method.  The results are given below.
