@@ -6,5 +6,5 @@ from .euler import *
 from .dynamic_triple import *
 from computepac import *
 
-__author__ = "mathemacode"
+__author__ = "glider4"
 __copyright__ = "License in LICENSE.txt"
