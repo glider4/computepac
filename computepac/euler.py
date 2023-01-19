@@ -11,7 +11,8 @@
 #       x1 = sym.Symbol('x1')
 #       x2 = sym.Symbol('x2')
 #       f = '''dy/dx equation with x1, x2 as x, y'''
-#       euler_[ ](f, x0, y0, lower bound, upper bound, num steps)
+#       euler_forward(f, x0, y0, lower bound, upper bound, num steps)
+#       # euler_backward(f, x0, y0, lower bound, upper bound, num steps)
 #
 # Note: do not use x or y as values.  Use x1, x2, etc.
 #
