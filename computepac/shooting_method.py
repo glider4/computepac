@@ -9,11 +9,11 @@
 #       f = sym.Function('f')
 #       x1 = sym.Symbol('x1')
 #       f = '''Equation with t variable as x1'''
-#       shooting()
+#       shooting(f, Z1, Z2, alpha, beta, n)
 #
 # Note: do not use x as a variable in the function.  Use x1.
 #
-# Output format: [values, solution, total_time]
+# Output format: [Z values, solution, total_time]
 #
 
 import sympy as sym
